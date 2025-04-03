@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ejerciciopa;
 
 public class Producto {
@@ -17,12 +14,12 @@ public class Producto {
         this.stock = stock;
     }
 
-    // Sobrecarga del constructor
+    // Sobrecarga 
     public Producto(String nombre, double precio) {
         this(nombre, precio, 0);
     }
 
-    // Método para vender un producto
+    // Metodo
     public boolean vender(int cantidad) {
         if (cantidad > stock) {
             System.out.println("Stock insuficiente.");
@@ -33,13 +30,13 @@ public class Producto {
         return true;
     }
 
-    // Método para reponer stock
+    // Metodo
     public void reponer(int cantidad) {
         stock += cantidad;
         System.out.println("Stock actualizado. Nuevo stock de " + nombre + ": " + stock);
     }
 
-    // Método para obtener información del producto
+    // Metodo
     public String obtenerInfo() {
         return "Producto: " + nombre + " | Precio: $" + precio + " | Stock: " + stock;
     }
